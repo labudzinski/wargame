@@ -3,14 +3,14 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Wargame-1: Wielkie otwarcie. Zagraj Wilkiem, dostań się do serwera i zmień stronę Babci. Pobierz plik i uruchom grę lokalnie w Dockerze.">
+    <meta name="description" content="Dwa bajkowe zadania wargame do nauki bezpieczeństwa. Pobierz jeden plik i uruchom wybrany poziom lokalnie w Dockerze.">
     <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'">
     <meta name="color-scheme" content="light dark">
-    <meta property="og:title" content="Wargame — Wielkie otwarcie">
-    <meta property="og:description" content="Kapturek wdrożyła. Leśniczy sprawdził. Teraz Twoja kolej: grasz Wilkiem.">
+    <meta property="og:title" content="Wargame — bajki o bezpieczeństwie">
+    <meta property="og:description" content="Wilk zmienia stronę Babci. Małgosia wyciąga Jasia z piekarni. Dwa poziomy, jeden plik do uruchomienia.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://wargame.labudzinski.com/">
-    <title>Wargame — Wielkie otwarcie</title>
+    <title>Wargame — bajki o bezpieczeństwie</title>
     <link rel="canonical" href="https://wargame.labudzinski.com/">
     <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
     <link rel="preload" href="./assets/fonts/onest-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="./assets/site.css">
   </head>
   <body>
-    <a class="skip-link" href="#level-1">Przejdź do zadania</a>
+    <a class="skip-link" href="#wybor-poziomu">Przejdź do wyboru poziomu</a>
     <header class="site-header ds-container">
       <a class="brand" href="./" aria-label="Wargame — strona główna">
         <span class="brand-mark" aria-hidden="true">&gt;_</span>
@@ -39,17 +39,27 @@
     </header>
 
     <main class="ds-container">
+      <section class="catalog-intro" id="wybor-poziomu" aria-labelledby="catalog-title">
+        <p class="eyebrow">Laboratoria bezpieczeństwa / Security+</p>
+        <h1 id="catalog-title">Wybierz poziom<span class="title-dot">.</span></h1>
+        <p>Dwie osobne historie i dwa zadania. Każdy poziom uruchamiasz i resetujesz oddzielnie.</p>
+        <nav class="level-navigation" aria-label="Wybór poziomu">
+          <a class="ds-button ds-button--secondary" href="#level-1">Level 1 · Wielkie otwarcie</a>
+          <a class="ds-button ds-button--secondary" href="#level-2">Level 2 · Drugi wypiek</a>
+        </nav>
+      </section>
       <section class="level" id="level-1" aria-labelledby="level-title">
         <div class="level-story">
           <div class="level-meta">
             <span class="eyebrow">Wargame / Level 01</span>
             <span class="ds-badge level-badge">Początkujący</span>
           </div>
-          <h1 id="level-title">Wielkie<br>otwarcie<span class="title-dot">.</span></h1>
+          <h2 class="level-title" id="level-title">Wielkie<br>otwarcie<span class="title-dot">.</span></h2>
           <p class="story-lead">Kapturek napisała stronę Babci.<br>Leśniczy twierdzi, że serwer jest bezpieczny.</p>
           <p class="mission">Grasz Wilkiem. Dostań się do systemu i zmień stronę Babci,
             żeby przed pokazem dla sąsiadów pojawił się na niej napis
             <strong>WILK BYŁ TUTAJ</strong>.</p>
+          <a class="ds-link level2-instructions" href="./level-1/">Przeczytaj opowieść Level 1 ↗</a>
         </div>
 
         <aside class="download ds-card" aria-labelledby="download-title">
@@ -57,14 +67,40 @@
             <span class="terminal-mark" aria-hidden="true">&gt;_</span>
             <span class="file-type">DOCKER / LOKALNIE</span>
           </div>
-          <h2 id="download-title">Jeden plik.<br>Cała rozgrywka.</h2>
-          <p>Pobierz skrypt, uruchom Dockera i wejdź do świata Babci.</p>
+          <h2 id="download-title">Uruchom Level 1</h2>
+          <p>Pobierz plik. W katalogu pobierania wykonaj:</p>
+          <pre aria-label="Uruchomienie Level 1"><code>sh wargame.sh --level=1</code></pre>
           <a class="ds-button ds-button--primary ds-button--lg download-button" href="./wargame.sh" download="wargame.sh">
             Pobierz wargame.sh
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M4 16v5h16v-5"/></svg>
           </a>
-          <div class="download-details"><span>Wargame-1</span><span>v1.2.1</span></div>
-          <p class="download-note">Gra działa na Twoim komputerze.</p>
+          <div class="download-details"><span>Level 1 · v1.2.1</span><span>Docker / lokalnie</span></div>
+          <p class="download-note">Ten plik obsługuje oba poziomy. Polecenie powyżej uruchamia Level 1.</p>
+        </aside>
+      </section>
+
+      <section class="level level-next" id="level-2" aria-labelledby="level2-title">
+        <div class="level-story">
+          <div class="level-meta">
+            <span class="eyebrow">Wargame / Level 02</span>
+            <span class="ds-badge level-badge">Krok dalej</span>
+          </div>
+          <h2 class="level-title" id="level2-title">Drugi<br>wypiek<span class="title-dot">.</span></h2>
+          <p class="story-lead">Jaś znalazł pracę u Baby Jagi.<br>Potem znalazł siebie w księdze wypieków.</p>
+          <p class="mission">Grasz Małgosią. Zmień odbiorcę przy wpisie Jasia na <strong>dom</strong>
+            i zatwierdź wydanie. Księga ma pokazać <strong>JAŚ WRACA DO DOMU</strong>.</p>
+          <p class="level-context">Rekonesans, sprawdzanie danych, analiza uprawnień i SSH.
+            Przydadzą się notatki; możesz też napisać własny skrypt.</p>
+          <a class="ds-link level2-instructions" href="./level-2/">Przeczytaj opowieść Level 2 ↗</a>
+        </div>
+        <aside class="download ds-card" aria-labelledby="level2-start-title">
+          <div class="download-heading"><span class="terminal-mark" aria-hidden="true">&gt;_</span><span class="file-type">TEN SAM PLIK</span></div>
+          <h3 id="level2-start-title">Uruchom Level 2</h3>
+          <p>Po pobraniu pliku i uruchomieniu Dockera wykonaj:</p>
+          <pre aria-label="Uruchomienie drugiego poziomu"><code>sh wargame.sh --level=2</code></pre>
+          <a class="ds-button ds-button--primary ds-button--lg download-button" href="./wargame.sh" download="wargame.sh">Pobierz wargame.sh ↓</a>
+          <div class="download-details"><span>Level 2 · v1.0.0</span><span>Docker / lokalnie</span></div>
+          <p class="download-note">Każdy poziom ma własną instancję i porty.</p>
         </aside>
       </section>
 
@@ -82,21 +118,30 @@
           </li>
           <li>
             <span class="step-number" aria-hidden="true">02</span>
-            <h3>Włącz grę</h3>
-            <p>W katalogu z pobranym plikiem wykonaj:</p>
-            <pre aria-label="Polecenie uruchomienia"><code><span class="shell-prompt" aria-hidden="true">$ </span>sh wargame.sh</code></pre>
+            <h3>Wybierz poziom</h3>
+            <p>W katalogu z pobranym plikiem uruchom pierwszy poziom:</p>
+            <pre aria-label="Polecenie uruchomienia"><code><span class="shell-prompt" aria-hidden="true">$ </span>sh wargame.sh --level=1</code></pre>
+            <p class="second-command">Drugi poziom: <code>sh wargame.sh --level=2</code>.</p>
           </li>
           <li>
             <span class="step-number" aria-hidden="true">03</span>
             <h3>Otwórz podany adres</h3>
-            <p>Skrypt pobierze obrazy i pokaże adres <code>wargame-1.localhost</code>
+            <p>Skrypt pobierze obrazy i pokaże adres <code>wargame-1.localhost</code> lub <code>wargame-2.localhost</code>
               z wolnym portem. Otwórz stronę,
               przeczytaj opowieść i rozpocznij zadanie.</p>
           </li>
         </ol>
         <div class="session-help">
-          <p>Nowa gra: <code>sh wargame.sh restart</code>. Zakończenie: <code>sh wargame.sh stop</code>.</p>
-          <p>Restart i zatrzymanie gry usuwają postęp.</p>
+          <div class="table-scroll"><table class="session-table">
+            <caption>Obsługa wybranego poziomu</caption>
+            <thead><tr><th scope="col">Czynność</th><th scope="col">Level 1</th><th scope="col">Level 2</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Adres gry</th><td><code>sh wargame.sh status --level=1</code></td><td><code>sh wargame.sh status --level=2</code></td></tr>
+              <tr><th scope="row">Nowa gra</th><td><code>sh wargame.sh restart --level=1</code></td><td><code>sh wargame.sh restart --level=2</code></td></tr>
+              <tr><th scope="row">Zakończenie</th><td><code>sh wargame.sh stop --level=1</code></td><td><code>sh wargame.sh stop --level=2</code></td></tr>
+            </tbody>
+          </table></div>
+          <p>Restart i zatrzymanie gry usuwają postęp wybranego poziomu.</p>
         </div>
       </section>
     </main>

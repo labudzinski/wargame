@@ -28,6 +28,7 @@ jobs:
           mkdir -p _site
           cp index.html CNAME .nojekyll wargame.sh _site/
           cp -R assets _site/assets
+          cp -R level-1 level-2 _site/
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Upload website only

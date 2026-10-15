@@ -111,7 +111,7 @@ p { margin: 0; }
   letter-spacing: .055em;
   text-transform: uppercase;
 }
-h1 {
+h1, .level-title {
   margin: var(--ds-space-5) 0;
   font-size: var(--ds-text-display);
   font-weight: 750;
@@ -126,7 +126,7 @@ h1 {
 .download-heading { display: flex; justify-content: space-between; align-items: center; gap: var(--ds-space-3); }
 .terminal-mark { color: var(--ds-accent-text); font: 500 26px var(--ds-font-mono); letter-spacing: -.1em; }
 .file-type { color: var(--ds-text-secondary); font: 400 11px var(--ds-font-mono); letter-spacing: .03em; }
-.download h2 { margin: 28px 0 16px; font-size: var(--ds-text-2xl); font-weight: 650; letter-spacing: -.025em; line-height: 1.25; }
+.download h2, .download h3 { margin: 28px 0 16px; font-size: var(--ds-text-2xl); font-weight: 650; letter-spacing: -.025em; line-height: 1.25; }
 .download > p { color: var(--ds-text-secondary); }
 .download-button { width: 100%; margin-top: var(--ds-space-5); }
 .download-details { display: flex; justify-content: space-between; gap: var(--ds-space-3); margin-top: var(--ds-space-4); color: var(--ds-text-secondary); font: 400 var(--ds-text-xs) var(--ds-font-mono); }
@@ -173,3 +173,21 @@ pre code { font-size: var(--ds-text-sm); white-space: pre; }
   .ds-theme-switcher { grid-column: 1 / -1; grid-row: 2; justify-self: end; }
   .header-link { grid-column: 2; grid-row: 1; }
 }
+
+.level-next { border-top: 1px solid var(--ds-border); }
+.level2-instructions { display: inline-flex; margin-top: var(--ds-space-4); }
+.steps .second-command { margin-top: var(--ds-space-3); }
+
+.catalog-intro { padding-block: var(--ds-space-7); border-bottom: 1px solid var(--ds-border); }
+.catalog-intro > p:last-of-type { max-width: 65ch; color: var(--ds-text-secondary); }
+.level-navigation, .story-actions { display: flex; flex-wrap: wrap; align-items: center; gap: var(--ds-space-4); margin-top: var(--ds-space-5); }
+.table-scroll { overflow-x: auto; margin-bottom: var(--ds-space-5); }
+.session-table { width: 100%; border-collapse: collapse; text-align: left; }
+.session-table caption { text-align: left; font-weight: 650; margin-bottom: var(--ds-space-3); color: var(--ds-text); }
+.session-table th, .session-table td { padding: 12px; border-bottom: 1px solid var(--ds-border-soft); vertical-align: top; }
+.session-table code { white-space: nowrap; }
+.story-page { padding-block: var(--ds-space-7); }
+.story-page h1 { max-width: 18ch; }
+.story-text { max-width: 68ch; font-size: var(--ds-text-lg); line-height: 1.8; }
+.story-text p + p { margin-top: 1.1em; }
+.story-actions { padding-top: var(--ds-space-5); }
