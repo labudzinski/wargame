@@ -100,7 +100,7 @@ services:
     tmpfs:
       - /tmp:rw,noexec,nosuid,nodev,size=8m,mode=1777
     ports:
-      - '127.0.0.1:${WEB_PORT:-8080}:8080'
+      - '127.0.0.1:${WEB_PORT:-0}:8080'
       - '127.0.0.1::2222'
     depends_on:
       babcia:
@@ -131,7 +131,7 @@ WARGAME_COMPOSE
 
 show_status() {
     web=$(compose port brama 8080) || return 1
-    printf 'http://%s\n' "$web"
+    printf 'http://wargame-1.localhost:%s\n' "${web##*:}"
 }
 
 case "$action" in
