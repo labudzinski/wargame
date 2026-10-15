@@ -1,0 +1,155 @@
+/* Shared focus treatment stays inside the target and follows its border radius. */
+:is(
+  .ds-button,
+  .ds-link,
+  .ds-resource-link,
+  .ds-input,
+  .ds-slider,
+  .ds-choice input,
+  .ds-tab-list button,
+  .ds-tab-panel,
+  .ds-table-scroll,
+  .ds-chart-table,
+  .ds-calendar-scroll,
+  .ds-calendar-days button,
+  .ds-table th button,
+  .ds-accordion button,
+  .ds-accordion summary,
+  .ds-tooltip-trigger,
+  .ds-toast-close,
+  .ds-select-face,
+  .ds-theme-switcher button,
+  .ds-multiselect button,
+  .ds-editor-toolbar button,
+  .ds-data-table button,
+  .ds-data-table input,
+  .ds-table-settings summary,
+  .ds-admin-navigation summary,
+  .ds-side-navigation a,
+  .ds-error-summary,
+  .ds-error-summary a,
+  .ds-source-disclosure summary
+):focus-visible,
+.ds-switch input:focus-visible + .ds-switch-track,
+.ds-editor:focus-within {
+  outline: var(--ds-focus-width) solid var(--ds-focus-color, var(--ds-accent-text));
+  outline-offset: var(--ds-focus-offset);
+}
+.ds-button--primary {
+  --ds-focus-color: var(--ds-accent-ink);
+}
+.ds-button--danger {
+  --ds-focus-color: var(--ds-danger);
+}
+.ds-button--danger:hover:not(:disabled) {
+  --ds-focus-color: var(--ds-bg);
+}
+.ds-select-face {
+  --ds-focus-color: var(--ds-accent-text);
+}
+.ds-error-summary {
+  --ds-focus-color: var(--ds-danger);
+}
+.ds-switch input:checked + .ds-switch-track {
+  --ds-focus-color: var(--ds-accent-ink);
+}
+.ds-choice input[type='checkbox']:checked,
+.ds-data-table input[type='checkbox']:checked {
+  --ds-focus-color: var(--ds-accent-text);
+}
+/* Small native checkboxes need an outer ring; an inset ring has insufficient area. */
+.ds-choice input[type]:focus-visible,
+.ds-table-check input[type]:focus-visible {
+  outline-offset: 2px;
+}
+.ds-switch input:focus-visible + .ds-switch-track {
+  --ds-focus-color: var(--ds-accent-text);
+  outline-offset: 2px;
+}
+.ds-editor-content .tiptap:focus-visible {
+  outline: none;
+}
+/* Without :has(), the trigger and the editor's container retain their own visible focus. */
+@supports selector(:has(*)) {
+  .ds-editor:focus-within {
+    outline: none;
+  }
+  .ds-multiselect-control:has(.ds-multiselect-trigger:focus-visible),
+  .ds-editor:has(.tiptap:focus-visible) {
+    outline: var(--ds-focus-width) solid var(--ds-focus-color, var(--ds-accent-text));
+    outline-offset: var(--ds-focus-offset);
+  }
+  .ds-multiselect .ds-multiselect-trigger:focus-visible {
+    outline: none;
+  }
+}
+/* Underlining alone cannot guarantee the changed area required by SC 2.4.13. */
+.ds-link:not(.ds-button):not(.ds-side-navigation a):focus-visible,
+.ds-project-title a:focus-visible,
+.ds-project-actions a:focus-visible,
+.ds-project-resources a:focus-visible,
+.ds-timeline a:focus-visible,
+.ds-source-url:focus-visible,
+.ds-error-summary a:focus-visible {
+  outline: var(--ds-focus-width) solid var(--ds-focus-color, var(--ds-accent-text));
+  outline-offset: 2px;
+  text-decoration-line: underline;
+  text-decoration-thickness: 3px;
+  background-color: var(--ds-accent-soft);
+}
+.ds-error-summary a:focus-visible {
+  background-color: var(--ds-danger-bg);
+}
+/* Navigation links and button links have a padded box suitable for an inset ring. */
+.ds-side-navigation .ds-link:focus-visible,
+.ds-button.ds-link:focus-visible {
+  outline: var(--ds-focus-width) solid var(--ds-focus-color, var(--ds-accent-text));
+  text-decoration: none;
+}
+@media (forced-colors: active) {
+  .ds-switch input:focus-visible + .ds-switch-track {
+    --ds-focus-color: CanvasText;
+  }
+  :is(
+    .ds-button,
+    .ds-link,
+    .ds-resource-link,
+    .ds-input,
+    .ds-slider,
+    .ds-choice input,
+    .ds-tab-list button,
+    .ds-tab-panel,
+    .ds-table-scroll,
+    .ds-chart-table,
+    .ds-calendar-scroll,
+    .ds-calendar-days button,
+    .ds-table th button,
+    .ds-accordion button,
+    .ds-accordion summary,
+    .ds-tooltip-trigger,
+    .ds-toast-close,
+    .ds-select-face,
+    .ds-theme-switcher button,
+    .ds-multiselect button,
+    .ds-editor-toolbar button,
+    .ds-data-table button,
+    .ds-data-table input,
+    .ds-table-settings summary,
+    .ds-admin-navigation summary,
+    .ds-side-navigation a,
+    .ds-error-summary,
+    .ds-error-summary a,
+    .ds-source-disclosure summary
+  ) {
+    --ds-focus-color: CanvasText;
+  }
+  .ds-switch-track,
+  .ds-multiselect-control,
+  .ds-editor {
+    --ds-focus-color: CanvasText;
+  }
+  .ds-link:not(.ds-button):not(.ds-side-navigation a):focus-visible,
+  .ds-error-summary a:focus-visible {
+    text-decoration-color: LinkText;
+  }
+}

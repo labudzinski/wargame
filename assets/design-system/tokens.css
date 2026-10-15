@@ -1,0 +1,305 @@
+/* Generated from tokens/source.json. Do not edit. */
+:root {
+  --ds-font-sans: Onest, 'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --ds-font-mono: 'Cascadia Code', Consolas, 'Liberation Mono', ui-monospace, monospace;
+  --ds-space-0: 0;
+  --ds-space-1: 4px;
+  --ds-space-2: 8px;
+  --ds-space-3: 12px;
+  --ds-space-4: 16px;
+  --ds-space-5: 24px;
+  --ds-space-6: 32px;
+  --ds-space-7: 48px;
+  --ds-space-8: 64px;
+  --ds-space-9: 96px;
+  --ds-radius-sm: 6px;
+  --ds-radius-md: 10px;
+  --ds-radius-lg: 14px;
+  --ds-radius-full: 999px;
+  --ds-text-xs: 0.8125rem;
+  --ds-text-sm: 0.875rem;
+  --ds-text-md: 1rem;
+  --ds-text-lg: 1.125rem;
+  --ds-text-xl: 1.3125rem;
+  --ds-text-2xl: 1.75rem;
+  --ds-text-3xl: 2.5rem;
+  --ds-text-display: clamp(2.5rem, 5vw, 4rem);
+  --ds-leading-tight: 1.15;
+  --ds-leading-body: 1.6;
+  --ds-tracking-title: -0.035em;
+  --ds-motion-fast: 100ms;
+  --ds-motion-base: 180ms;
+  --ds-motion-slow: 280ms;
+  --ds-ease: cubic-bezier(0.25, 0.1, 0.25, 1);
+  --ds-control-height: 44px;
+  --ds-control-height-sm: 44px;
+  --ds-control-height-lg: 52px;
+  --ds-measure-text: 68ch;
+  --ds-measure-page: 1040px;
+  --ds-measure-console: 1600px;
+  --ds-measure-form: 440px;
+  --ds-z-sticky: 10;
+  --ds-z-overlay: 30;
+  --ds-z-toast: 50;
+  --ds-border-width: 1px;
+  --ds-z-floating: 100;
+  --ds-focus-width: 3px;
+  --ds-focus-offset: -4px;
+  --ds-accent: #245b86;
+  --ds-accent-hover: #194467;
+  --ds-accent-ink: #ffffff;
+  --ds-accent-text: #144b76;
+  --ds-accent-soft: #e5f0f8;
+  --ds-segment-fill: #1b4f72;
+  --ds-segment-ink: #ffffff;
+}
+:root, [data-theme="light"] {
+  --ds-bg: #f7f6f3;
+  --ds-surface: #ffffff;
+  --ds-surface-raised: #eeede9;
+  --ds-surface-sunken: #e8e7e2;
+  --ds-surface-hover: #e2e4e8;
+  --ds-text: #1b2028;
+  --ds-text-secondary: #434952;
+  --ds-text-tertiary: #424952;
+  --ds-border: #c5c9d0;
+  --ds-border-soft: #dce0e5;
+  --ds-border-control: #78808e;
+  --ds-success: #185944;
+  --ds-success-bg: #e4f3ec;
+  --ds-warning: #6f4806;
+  --ds-warning-bg: #fff0d1;
+  --ds-danger: #961f1f;
+  --ds-danger-bg: #fbe9e7;
+  --ds-info: #1b527d;
+  --ds-info-bg: #e7f0f8;
+  --ds-shadow-sm: 0 2px 8px rgb(20 24 31 / 6%);
+  --ds-shadow-lg: 0 22px 48px rgb(20 24 31 / 16%);
+}
+[data-brand="neutral"] {
+  --ds-accent: #245b86;
+  --ds-accent-hover: #194467;
+  --ds-accent-ink: #ffffff;
+  --ds-accent-text: #144b76;
+  --ds-accent-soft: #e5f0f8;
+  --ds-segment-fill: #1b4f72;
+  --ds-segment-ink: #ffffff;
+}
+[data-brand="labudzinski"] {
+  --ds-accent: #993800;
+  --ds-accent-hover: #873800;
+  --ds-accent-ink: #ffffff;
+  --ds-accent-text: #872600;
+  --ds-accent-soft: #ffeadb;
+  --ds-segment-fill: #ff7900;
+  --ds-segment-ink: #0e1116;
+}
+[data-brand="lemric"] {
+  --ds-accent: #245b86;
+  --ds-accent-hover: #194467;
+  --ds-accent-ink: #ffffff;
+  --ds-accent-text: #144b76;
+  --ds-accent-soft: #e5f0f8;
+  --ds-segment-fill: #1b4f72;
+  --ds-segment-ink: #ffffff;
+}
+[data-brand="brandoriented"] {
+  --ds-accent: #245b86;
+  --ds-accent-hover: #194467;
+  --ds-accent-ink: #ffffff;
+  --ds-accent-text: #144b76;
+  --ds-accent-soft: #e5f0f8;
+  --ds-segment-fill: #1b4f72;
+  --ds-segment-ink: #ffffff;
+}
+[data-brand="kapibara"] {
+  --ds-accent: #276044;
+  --ds-accent-hover: #1b4832;
+  --ds-accent-ink: #ffffff;
+  --ds-accent-text: #195236;
+  --ds-accent-soft: #e5f2e8;
+  --ds-segment-fill: #276044;
+  --ds-segment-ink: #ffffff;
+}
+[data-brand="dataleak"] {
+  --ds-accent: #a62623;
+  --ds-accent-hover: #8e2422;
+  --ds-accent-ink: #ffffff;
+  --ds-accent-text: #92120f;
+  --ds-accent-soft: #fce8e6;
+  --ds-segment-fill: #a62623;
+  --ds-segment-ink: #ffffff;
+}
+[data-theme="dark"] {
+  --ds-bg: #14181f;
+  --ds-surface: #1c222d;
+  --ds-surface-raised: #252c38;
+  --ds-surface-sunken: #0e1116;
+  --ds-surface-hover: #303848;
+  --ds-text: #f4f2ee;
+  --ds-text-secondary: #cfc9c1;
+  --ds-text-tertiary: #cfc9c1;
+  --ds-border: #3a4453;
+  --ds-border-soft: #2e3642;
+  --ds-border-control: #7c8594;
+  --ds-success: #78c7b1;
+  --ds-success-bg: #192f2b;
+  --ds-warning: #f2bf68;
+  --ds-warning-bg: #352b1c;
+  --ds-danger: #ff9b92;
+  --ds-danger-bg: #3b2327;
+  --ds-info: #96c5eb;
+  --ds-info-bg: #1d2d40;
+  --ds-shadow-sm: 0 2px 8px rgb(0 0 0 / 18%);
+  --ds-shadow-lg: 0 22px 48px rgb(0 0 0 / 45%);
+  --ds-accent: #7eb6db;
+  --ds-accent-hover: #a1cdea;
+  --ds-accent-ink: #0b1a28;
+  --ds-accent-text: #98d0f5;
+  --ds-accent-soft: #1e3041;
+  --ds-segment-fill: #1b4f72;
+  --ds-segment-ink: #ffffff;
+}
+[data-theme="dark"][data-brand="neutral"], [data-theme="dark"] [data-brand="neutral"] {
+  --ds-accent: #7eb6db;
+  --ds-accent-hover: #a1cdea;
+  --ds-accent-ink: #0b1a28;
+  --ds-accent-text: #98d0f5;
+  --ds-accent-soft: #1e3041;
+  --ds-segment-fill: #1b4f72;
+  --ds-segment-ink: #ffffff;
+}
+[data-theme="dark"][data-brand="labudzinski"], [data-theme="dark"] [data-brand="labudzinski"] {
+  --ds-accent: #ff9a4a;
+  --ds-accent-hover: #ffb77e;
+  --ds-accent-ink: #211306;
+  --ds-accent-text: #ffbd6d;
+  --ds-accent-soft: #35281f;
+  --ds-segment-fill: #ff7900;
+  --ds-segment-ink: #0e1116;
+}
+[data-theme="dark"][data-brand="lemric"], [data-theme="dark"] [data-brand="lemric"] {
+  --ds-accent: #7eb6db;
+  --ds-accent-hover: #a1cdea;
+  --ds-accent-ink: #0b1a28;
+  --ds-accent-text: #98d0f5;
+  --ds-accent-soft: #1e3041;
+  --ds-segment-fill: #1b4f72;
+  --ds-segment-ink: #ffffff;
+}
+[data-theme="dark"][data-brand="brandoriented"], [data-theme="dark"] [data-brand="brandoriented"] {
+  --ds-accent: #7eb6db;
+  --ds-accent-hover: #a1cdea;
+  --ds-accent-ink: #0b1a28;
+  --ds-accent-text: #98d0f5;
+  --ds-accent-soft: #1e3041;
+  --ds-segment-fill: #1b4f72;
+  --ds-segment-ink: #ffffff;
+}
+[data-theme="dark"][data-brand="kapibara"], [data-theme="dark"] [data-brand="kapibara"] {
+  --ds-accent: #7ebf97;
+  --ds-accent-hover: #a4d6b6;
+  --ds-accent-ink: #10251a;
+  --ds-accent-text: #97d8b0;
+  --ds-accent-soft: #20342b;
+  --ds-segment-fill: #276044;
+  --ds-segment-ink: #ffffff;
+}
+[data-theme="dark"][data-brand="dataleak"], [data-theme="dark"] [data-brand="dataleak"] {
+  --ds-accent: #ff7a74;
+  --ds-accent-hover: #ff9990;
+  --ds-accent-ink: #24110f;
+  --ds-accent-text: #ffb8af;
+  --ds-accent-soft: #3b2327;
+  --ds-segment-fill: #ff7a74;
+  --ds-segment-ink: #24110f;
+}
+@media (prefers-color-scheme: dark) {
+[data-theme="auto"] {
+  --ds-bg: #14181f;
+  --ds-surface: #1c222d;
+  --ds-surface-raised: #252c38;
+  --ds-surface-sunken: #0e1116;
+  --ds-surface-hover: #303848;
+  --ds-text: #f4f2ee;
+  --ds-text-secondary: #cfc9c1;
+  --ds-text-tertiary: #cfc9c1;
+  --ds-border: #3a4453;
+  --ds-border-soft: #2e3642;
+  --ds-border-control: #7c8594;
+  --ds-success: #78c7b1;
+  --ds-success-bg: #192f2b;
+  --ds-warning: #f2bf68;
+  --ds-warning-bg: #352b1c;
+  --ds-danger: #ff9b92;
+  --ds-danger-bg: #3b2327;
+  --ds-info: #96c5eb;
+  --ds-info-bg: #1d2d40;
+  --ds-shadow-sm: 0 2px 8px rgb(0 0 0 / 18%);
+  --ds-shadow-lg: 0 22px 48px rgb(0 0 0 / 45%);
+  --ds-accent: #7eb6db;
+  --ds-accent-hover: #a1cdea;
+  --ds-accent-ink: #0b1a28;
+  --ds-accent-text: #98d0f5;
+  --ds-accent-soft: #1e3041;
+  --ds-segment-fill: #1b4f72;
+  --ds-segment-ink: #ffffff;
+}
+[data-theme="auto"][data-brand="neutral"], [data-theme="auto"] [data-brand="neutral"] {
+  --ds-accent: #7eb6db;
+  --ds-accent-hover: #a1cdea;
+  --ds-accent-ink: #0b1a28;
+  --ds-accent-text: #98d0f5;
+  --ds-accent-soft: #1e3041;
+  --ds-segment-fill: #1b4f72;
+  --ds-segment-ink: #ffffff;
+}
+[data-theme="auto"][data-brand="labudzinski"], [data-theme="auto"] [data-brand="labudzinski"] {
+  --ds-accent: #ff9a4a;
+  --ds-accent-hover: #ffb77e;
+  --ds-accent-ink: #211306;
+  --ds-accent-text: #ffbd6d;
+  --ds-accent-soft: #35281f;
+  --ds-segment-fill: #ff7900;
+  --ds-segment-ink: #0e1116;
+}
+[data-theme="auto"][data-brand="lemric"], [data-theme="auto"] [data-brand="lemric"] {
+  --ds-accent: #7eb6db;
+  --ds-accent-hover: #a1cdea;
+  --ds-accent-ink: #0b1a28;
+  --ds-accent-text: #98d0f5;
+  --ds-accent-soft: #1e3041;
+  --ds-segment-fill: #1b4f72;
+  --ds-segment-ink: #ffffff;
+}
+[data-theme="auto"][data-brand="brandoriented"], [data-theme="auto"] [data-brand="brandoriented"] {
+  --ds-accent: #7eb6db;
+  --ds-accent-hover: #a1cdea;
+  --ds-accent-ink: #0b1a28;
+  --ds-accent-text: #98d0f5;
+  --ds-accent-soft: #1e3041;
+  --ds-segment-fill: #1b4f72;
+  --ds-segment-ink: #ffffff;
+}
+[data-theme="auto"][data-brand="kapibara"], [data-theme="auto"] [data-brand="kapibara"] {
+  --ds-accent: #7ebf97;
+  --ds-accent-hover: #a4d6b6;
+  --ds-accent-ink: #10251a;
+  --ds-accent-text: #97d8b0;
+  --ds-accent-soft: #20342b;
+  --ds-segment-fill: #276044;
+  --ds-segment-ink: #ffffff;
+}
+[data-theme="auto"][data-brand="dataleak"], [data-theme="auto"] [data-brand="dataleak"] {
+  --ds-accent: #ff7a74;
+  --ds-accent-hover: #ff9990;
+  --ds-accent-ink: #24110f;
+  --ds-accent-text: #ffb8af;
+  --ds-accent-soft: #3b2327;
+  --ds-segment-fill: #ff7a74;
+  --ds-segment-ink: #24110f;
+}
+}
+[data-theme="light"] { color-scheme: light; }
+[data-theme="dark"] { color-scheme: dark; }
+[data-theme="auto"] { color-scheme: light dark; }

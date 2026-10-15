@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="pl" data-brand="labudzinski" data-theme="light">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Wargame-1: Wielkie otwarcie. Zagraj Wilkiem, dostań się do serwera i zmień stronę Babci. Pobierz plik i uruchom grę lokalnie w Dockerze.">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'">
+    <meta name="color-scheme" content="light dark">
+    <meta property="og:title" content="Wargame — Wielkie otwarcie">
+    <meta property="og:description" content="Kapturek wdrożyła. Leśniczy sprawdził. Teraz Twoja kolej: grasz Wilkiem.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://wargame.labudzinski.com/">
+    <title>Wargame — Wielkie otwarcie</title>
+    <link rel="canonical" href="https://wargame.labudzinski.com/">
+    <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+    <link rel="preload" href="./assets/fonts/onest-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+    <script src="./assets/theme.js"></script>
+    <link rel="stylesheet" href="./assets/design-system/tokens.css">
+    <link rel="stylesheet" href="./assets/design-system/components.css">
+    <link rel="stylesheet" href="./assets/design-system/source-controls.css">
+    <link rel="stylesheet" href="./assets/design-system/focus.css">
+    <link rel="stylesheet" href="./assets/site.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#level-1">Przejdź do zadania</a>
+    <header class="site-header ds-container">
+      <a class="brand" href="./" aria-label="Wargame — strona główna">
+        <span class="brand-mark" aria-hidden="true">&gt;_</span>
+        <span>wargame<span class="brand-dot">.</span></span>
+      </a>
+      <div class="header-actions">
+        <div class="ds-theme-switcher" role="group" aria-label="Motyw strony" data-ds-theme-switcher data-ds-theme-storage="wargame-theme" hidden>
+          <button type="button" data-theme-choice="light" aria-pressed="true"><span>Jasny</span></button>
+          <button type="button" data-theme-choice="dark" aria-pressed="false"><span>Ciemny</span></button>
+          <button type="button" data-theme-choice="auto" aria-pressed="false"><span>Auto</span></button>
+        </div>
+        <a class="ds-link header-link" href="#uruchomienie">Jak uruchomić <span aria-hidden="true">↘</span></a>
+      </div>
+    </header>
+
+    <main class="ds-container">
+      <section class="level" id="level-1" aria-labelledby="level-title">
+        <div class="level-story">
+          <div class="level-meta">
+            <span class="eyebrow">Wargame / Level 01</span>
+            <span class="ds-badge level-badge">Początkujący</span>
+          </div>
+          <h1 id="level-title">Wielkie<br>otwarcie<span class="title-dot">.</span></h1>
+          <p class="story-lead">Kapturek napisała stronę Babci.<br>Leśniczy twierdzi, że serwer jest bezpieczny.</p>
+          <p class="mission">Grasz Wilkiem. Dostań się do systemu i zmień stronę Babci,
+            żeby przed pokazem dla sąsiadów pojawił się na niej napis
+            <strong>WILK BYŁ TUTAJ</strong>.</p>
+        </div>
+
+        <aside class="download ds-card" aria-labelledby="download-title">
+          <div class="download-heading">
+            <span class="terminal-mark" aria-hidden="true">&gt;_</span>
+            <span class="file-type">DOCKER / LOKALNIE</span>
+          </div>
+          <h2 id="download-title">Jeden plik.<br>Cała rozgrywka.</h2>
+          <p>Pobierz skrypt, uruchom Dockera i wejdź do świata Babci.</p>
+          <a class="ds-button ds-button--primary ds-button--lg download-button" href="./wargame.sh" download="wargame.sh">
+            Pobierz wargame.sh
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M4 16v5h16v-5"/></svg>
+          </a>
+          <div class="download-details"><span>Wargame-1</span><span>v1.2.1</span></div>
+          <p class="download-note">Gra działa na Twoim komputerze.</p>
+        </aside>
+      </section>
+
+      <section class="setup" id="uruchomienie" aria-labelledby="setup-title">
+        <div class="setup-heading">
+          <h2 id="setup-title">Jak uruchomić</h2>
+          <span class="eyebrow">Od pobrania do gry</span>
+        </div>
+        <ol class="steps">
+          <li>
+            <span class="step-number" aria-hidden="true">01</span>
+            <h3>Uruchom Dockera</h3>
+            <p>Potrzebujesz Dockera z Compose v2 i terminala <code>sh</code>.
+              Na Windows użyj WSL.</p>
+          </li>
+          <li>
+            <span class="step-number" aria-hidden="true">02</span>
+            <h3>Włącz grę</h3>
+            <p>W katalogu z pobranym plikiem wykonaj:</p>
+            <pre aria-label="Polecenie uruchomienia"><code><span class="shell-prompt" aria-hidden="true">$ </span>sh wargame.sh</code></pre>
+          </li>
+          <li>
+            <span class="step-number" aria-hidden="true">03</span>
+            <h3>Otwórz podany adres</h3>
+            <p>Skrypt pobierze obrazy i pokaże adres strony. Otwórz ją,
+              przeczytaj opowieść i rozpocznij zadanie.</p>
+          </li>
+        </ol>
+        <div class="session-help">
+          <p>Nowa gra: <code>sh wargame.sh restart</code>. Zakończenie: <code>sh wargame.sh stop</code>.</p>
+          <p>Restart i zatrzymanie gry usuwają postęp.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer ds-container">
+      <span>Wargame · labudzinski.com</span>
+      <a class="ds-link" href="https://github.com/labudzinski/wargame">GitHub <span aria-hidden="true">↗</span></a>
+    </footer>
+  </body>
+</html>
