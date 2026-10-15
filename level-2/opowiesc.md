@@ -26,7 +26,7 @@ Przez uchylone okno słychać było Babę Jagę.
 
 Sowa porządkowała archiwum z kuzynką za granicą. Każda zapisywała czas według własnego zegara. Żadna nie chciała ustąpić.
 
-Małgosia znała te porządki. Podczas ostatniej kontroli rewident dostał spis dokumentów, a Baba Jaga kazała opieczętować teczki, do których nie miał prawa zaglądać. Później Sowa wyciągnęła rachunek za mąkę razem z całą teczką zastrzeżonych papierów. Pieczęcie były całe, ale szuflada nie miała zamka.
+Małgosia wiedziała, od czego zacząć. Najpierw trzeba było wejść od zewnątrz: znaleźć aktualną kopię i dojść do konta, które wciąż działa. Potem — dostać się dalej, niż pozwala zwykły odczyt. Rewident dostawał spis dokumentów, ale Baba Jaga kazała opieczętować teczki, do których nie miał prawa zaglądać. Później Sowa wyciągnęła rachunek za mąkę razem z całą teczką zastrzeżonych papierów. Pieczęcie były całe, szuflada nie miała zamka. Na strychu zostawały też ślady dawnej zmiany: konta, pieczątki, klucze serwisowe. Część już wycofali. Część nie.
 
 Wróciła pod okno. Jaś czekał przy szybie.
 
@@ -36,7 +36,7 @@ Wróciła pod okno. Jaś czekał przy szybie.
 
 Ściszył głos.
 
-– Do wydania trzeba mojej zgody i pieczęci zmiany. Sama karta dyżuru nie wystarczy. W szafce zostały pieczątki starej ekipy, ale część już wycofali.
+– Do wydania trzeba mojej zgody i pieczęci zmiany. Sama karta dyżuru nie wystarczy. W szafce zostały pieczątki starej ekipy, ale część już wycofali. Podmienić odbiorcę może tylko ktoś z właściwą pieczęcią i świeżym odciskiem wpisu. Inaczej księga tego nie przyjmie.
 
 Za jego plecami skrzypnęły drzwi. Odsunął się od okna, zanim Małgosia zdążyła odpowiedzieć.
 

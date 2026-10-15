@@ -3,8 +3,8 @@
 # Generated from level*/compose.yaml and scripts/wargame.sh.in; edit those sources.
 set -eu
 export WARGAME_REGISTRY="${WARGAME_REGISTRY:-ghcr.io/labudzinski}"
-export WARGAME_VERSION="${WARGAME_VERSION:-1.2.1}"
-export WARGAME_LEVEL2_VERSION="${WARGAME_LEVEL2_VERSION:-1.0.0}"
+export WARGAME_VERSION="${WARGAME_VERSION:-1.3.0}"
+export WARGAME_LEVEL2_VERSION="${WARGAME_LEVEL2_VERSION:-1.1.0}"
 
 action=start
 level=1
@@ -54,7 +54,7 @@ x-isolation: &isolation
 services:
   piekarnia:
     <<: *isolation
-    image: ${WARGAME_REGISTRY:-ghcr.io/labudzinski}/wargame-level-2-web:${WARGAME_LEVEL2_VERSION:-1.0.0}
+    image: ${WARGAME_REGISTRY:-ghcr.io/labudzinski}/wargame-level-2-web:${WARGAME_LEVEL2_VERSION:-1.1.0}
     user: '20001:20000'
     command: [web]
     tmpfs:
@@ -69,7 +69,7 @@ services:
       start_period: 10s
   strych:
     <<: *isolation
-    image: ${WARGAME_REGISTRY:-ghcr.io/labudzinski}/wargame-level-2-ssh:${WARGAME_LEVEL2_VERSION:-1.0.0}
+    image: ${WARGAME_REGISTRY:-ghcr.io/labudzinski}/wargame-level-2-ssh:${WARGAME_LEVEL2_VERSION:-1.1.0}
     user: '20002:20000'
     command: [ssh]
     tmpfs:
@@ -86,7 +86,7 @@ services:
       start_period: 10s
   brama:
     <<: *isolation
-    image: ${WARGAME_REGISTRY:-ghcr.io/labudzinski}/wargame-level-2-gateway:${WARGAME_LEVEL2_VERSION:-1.0.0}
+    image: ${WARGAME_REGISTRY:-ghcr.io/labudzinski}/wargame-level-2-gateway:${WARGAME_LEVEL2_VERSION:-1.1.0}
     user: '20003:20003'
     command: [gate]
     networks: [las, wejscie]
@@ -141,7 +141,7 @@ x-isolation: &isolation
 services:
   babcia:
     <<: *isolation
-    image: ${WARGAME_REGISTRY:-ghcr.io/labudzinski}/wargame-level-1-web:${WARGAME_VERSION:-1.2.1}
+    image: ${WARGAME_REGISTRY:-ghcr.io/labudzinski}/wargame-level-1-web:${WARGAME_VERSION:-1.3.0}
     user: '10001:10000'
     command: [web]
     tmpfs:
@@ -160,7 +160,7 @@ services:
       start_period: 10s
   lesniczy:
     <<: *isolation
-    image: ${WARGAME_REGISTRY:-ghcr.io/labudzinski}/wargame-level-1-ssh:${WARGAME_VERSION:-1.2.1}
+    image: ${WARGAME_REGISTRY:-ghcr.io/labudzinski}/wargame-level-1-ssh:${WARGAME_VERSION:-1.3.0}
     user: '10002:10000'
     command: [ssh]
     tmpfs:
@@ -178,7 +178,7 @@ services:
 
   brama:
     <<: *isolation
-    image: ${WARGAME_REGISTRY:-ghcr.io/labudzinski}/wargame-level-1-gateway:${WARGAME_VERSION:-1.2.1}
+    image: ${WARGAME_REGISTRY:-ghcr.io/labudzinski}/wargame-level-1-gateway:${WARGAME_VERSION:-1.3.0}
     user: '10003:10003'
     command: [gate]
     networks: [las, wejscie]

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Dwa bajkowe zadania wargame do nauki bezpieczeństwa. Pobierz jeden plik i uruchom wybrany poziom lokalnie w Dockerze.">
+    <meta name="description" content="Dwa bajkowe wargame. Pobierz jeden plik i uruchom wybrany poziom lokalnie w Dockerze.">
     <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'">
     <meta name="color-scheme" content="light dark">
     <meta property="og:title" content="Wargame — bajki o bezpieczeństwie">
@@ -40,7 +40,7 @@
 
     <main class="ds-container">
       <section class="catalog-intro" id="wybor-poziomu" aria-labelledby="catalog-title">
-        <p class="eyebrow">Laboratoria bezpieczeństwa / Security+</p>
+        <p class="eyebrow">Dwa poziomy wargame</p>
         <h1 id="catalog-title">Wybierz poziom<span class="title-dot">.</span></h1>
         <p>Dwie osobne historie i dwa zadania. Każdy poziom uruchamiasz i resetujesz oddzielnie.</p>
         <nav class="level-navigation" aria-label="Wybór poziomu">
@@ -74,7 +74,7 @@
             Pobierz wargame.sh
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M4 16v5h16v-5"/></svg>
           </a>
-          <div class="download-details"><span>Level 1 · v1.2.1</span><span>Docker / lokalnie</span></div>
+          <div class="download-details"><span>Level 1 · v1.3.0</span><span>Docker / lokalnie</span></div>
           <p class="download-note">Ten plik obsługuje oba poziomy. Polecenie powyżej uruchamia Level 1.</p>
         </aside>
       </section>
@@ -87,9 +87,10 @@
           </div>
           <h2 class="level-title" id="level2-title">Drugi<br>wypiek<span class="title-dot">.</span></h2>
           <p class="story-lead">Jaś znalazł pracę u Baby Jagi.<br>Potem znalazł siebie w księdze wypieków.</p>
-          <p class="mission">Grasz Małgosią. Zmień odbiorcę przy wpisie Jasia na <strong>dom</strong>
-            i zatwierdź wydanie. Księga ma pokazać <strong>JAŚ WRACA DO DOMU</strong>.</p>
-          <p class="level-context">Rekonesans, sprawdzanie danych, analiza uprawnień i SSH.
+          <p class="mission">Grasz Małgosią. Wejdź do systemu, zdobądź więcej niż odczyt
+            i podmień odbiorcę przy wpisie Jasia na <strong>dom</strong>.
+            Księga ma pokazać <strong>JAŚ WRACA DO DOMU</strong>.</p>
+          <p class="level-context">Infiltracja, eskalacja uprawnień, podmiana wpisu.
             Przydadzą się notatki; możesz też napisać własny skrypt.</p>
           <a class="ds-link level2-instructions" href="./level-2/">Przeczytaj opowieść Level 2 ↗</a>
         </div>
@@ -99,7 +100,7 @@
           <p>Po pobraniu pliku i uruchomieniu Dockera wykonaj:</p>
           <pre aria-label="Uruchomienie drugiego poziomu"><code>sh wargame.sh --level=2</code></pre>
           <a class="ds-button ds-button--primary ds-button--lg download-button" href="./wargame.sh" download="wargame.sh">Pobierz wargame.sh ↓</a>
-          <div class="download-details"><span>Level 2 · v1.0.0</span><span>Docker / lokalnie</span></div>
+          <div class="download-details"><span>Level 2 · v1.1.0</span><span>Docker / lokalnie</span></div>
           <p class="download-note">Każdy poziom ma własną instancję i porty.</p>
         </aside>
       </section>
@@ -144,10 +145,46 @@
           <p>Restart i zatrzymanie gry usuwają postęp wybranego poziomu.</p>
         </div>
       </section>
+
+      <section class="setup" id="faq" aria-labelledby="faq-title">
+        <div class="setup-heading">
+          <h2 id="faq-title">Pytania</h2>
+          <span class="eyebrow">Krótko</span>
+        </div>
+        <ol class="steps">
+          <li>
+            <span class="step-number" aria-hidden="true">?</span>
+            <h3>Obrazy się nie pobierają</h3>
+            <p>Sprawdź, czy Docker działa i czy masz sieć. Pakiety w GHCR muszą być publiczne.
+              Skrypt nie wymaga logowania do GitHuba, gdy obrazy są publiczne.</p>
+          </li>
+          <li>
+            <span class="step-number" aria-hidden="true">?</span>
+            <h3>Gdzie jest port SSH?</h3>
+            <p>Launcher pokazuje tylko adres WWW. W Level 1 port SSH podaje prowadzący
+              albo sprawdzisz go w Dockerze. W Level 2 port pojawia się w trakcie gry.</p>
+          </li>
+          <li>
+            <span class="step-number" aria-hidden="true">?</span>
+            <h3>Postęp zniknął</h3>
+            <p><code>restart</code> i <code>stop</code> zaczynają od zera. Klucze i dane zmieniają się przy każdym starcie.</p>
+          </li>
+        </ol>
+      </section>
+
+      <section class="setup" id="zasady" aria-labelledby="zasady-title">
+        <div class="setup-heading">
+          <h2 id="zasady-title">Zasady zabawy</h2>
+          <span class="eyebrow">Uczciwie i lokalnie</span>
+        </div>
+        <p>To celowo podatne gry uruchamiane u Ciebie na komputerze.
+          Graj tylko na swojej lokalnej instancji albo na takiej, którą dostałeś od prowadzącego.
+          Nie atakuj cudzych systemów. Nie skanuj innych usług na swoim komputerze poza tą grą.</p>
+      </section>
     </main>
 
     <footer class="site-footer ds-container">
-      <span>Wargame · labudzinski.com</span>
+      <span>Wargame · labudzinski.com · MIT</span>
       <a class="ds-link" href="https://github.com/labudzinski/wargame">GitHub <span aria-hidden="true">↗</span></a>
     </footer>
   </body>

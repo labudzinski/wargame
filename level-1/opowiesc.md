@@ -1,6 +1,6 @@
 # Wielkie otwarcie
 
-Kapturek skończyła stronę Babci w piątek, tuż przed obiadem. Były na niej czerwone maki, godziny odwiedzin i wielki napis „Babcia zaprasza”. Babcia obejrzała wszystko dwa razy, po czym zapytała, czy można trochę powiększyć litery. Kapturek powiększyła. Potem jeszcze raz.
+Kapturek skończyła stronę Babci w piątek, tuż przed obiadem. Były na niej czerwone maki, godziny odwiedzin i wielki napis „Babcia zaprasza”. Babcia obejrzała wszystko dwa razy, po czym poprosiła, żeby trochę powiększyć litery. Kapturek powiększyła. Potem jeszcze raz.
 
 Leśniczy przyszedł sprawdzić serwer. Od pewnego czasu zajmował się administracją, bo w lesie wszyscy mieli już komputery, a drzew nikt nie chciał ścinać.
 
@@ -24,7 +24,7 @@ To ostatnie trochę Wilka ubodło. Znał Leśniczego. Kiedyś przez godzinę nap
 
 Poszedł więc pod dom Babci. Nowa strona działała, drzwi były zamknięte, a Kapturka dawno już nie było. Przy schodach zobaczył skrawek czerwonej wikliny. Pomyślał, że Kapturek zawsze zabierała ten koszyk, nawet gdy przychodziła tylko poprawić jedną literę.
 
-Na ścianie szopy wisiała jeszcze lista ekipy od remontu. Wilk sam pomagał wtedy malować fasadę. Potem pokłócił się z Babcią o zapłatę i więcej go nie zaproszono. Jego imię nadal było na liście.
+Na ścianie szopy wisiała jeszcze lista ekipy od remontu. Wilk sam pomagał wtedy malować fasadę. Potem pokłócił się z Babcią o zapłatę i więcej go nie zaproszono. Jego imię nadal było na liście. Wyłączenie roota tego nie zmieniało.
 
 Kapturek zaczęła od tego czasu zamykać klucze w pudełku. Leśniczy pochwalił ostrożność. Nie zapytał, gdzie zapisała sposób otwierania. Wilk przypomniał sobie zeszyt z pracowni. Kapturek notowała w nim każde zlecenie, bo Babcia nigdy nie pamiętała, za co już zapłaciła.
 
